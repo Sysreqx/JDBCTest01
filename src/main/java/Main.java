@@ -29,10 +29,9 @@ public class Main {
 //        course.setDescription("ADescription");
 //        course.setTeacherId(1);
 
-        Course course = session.get(Course.class, 48);
-        course.setName("BBB");
+        Course course = session.get(Course.class, 2);
 
-        session.save(course);
+        System.out.println(course.getTeacher().getName());
 
         transaction.commit();
         session.close();
