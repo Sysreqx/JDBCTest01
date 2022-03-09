@@ -20,7 +20,6 @@ public class Course {
     @Column(name = "teacher_id")
     private int teacherId;
 
-
     @Column(name = "students_count")
     private int studentsCount;
 
