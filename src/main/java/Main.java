@@ -9,6 +9,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -30,8 +31,12 @@ public class Main {
 //        course.setTeacherId(1);
 
         Course course = session.get(Course.class, 2);
+        List<Student> students = course.getStudents();
 
-        System.out.println(course.getTeacher().getName());
+        for (Student student : students) {
+            System.out.println(student.getName());
+        }
+
 
         transaction.commit();
         session.close();

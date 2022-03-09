@@ -1,5 +1,4 @@
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -14,7 +13,7 @@ public class Student {
     private int age;
 
     @Column(name = "registration_date")
-    private LocalDateTime registrationDate;
+    private Date registrationDate;
 
     public int getId() {
         return id;
@@ -40,11 +39,11 @@ public class Student {
         this.age = age;
     }
 
-    public LocalDateTime getRegistrationDate() {
+    public Date getRegistrationDate() {
         return registrationDate;
     }
 
-    public void setRegistrationDate(LocalDateTime registrationDate) {
+    public void setRegistrationDate(Date registrationDate) {
         this.registrationDate = registrationDate;
     }
 }
