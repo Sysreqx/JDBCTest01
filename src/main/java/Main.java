@@ -37,7 +37,6 @@ public class Main {
             System.out.println(student.getName());
         }
 
-
         transaction.commit();
         session.close();
     }
